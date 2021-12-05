@@ -44,19 +44,25 @@ const RandomBeer = () => {
         style={{
           display: 'flex',
           flexDirection: 'column',
-          justifyContent: 'center',
+          alignItems: 'center',
         }}
       >
         <img
-          style={{ display: 'flex', width: '240px' }}
+          style={{ display: 'flex', height: '300px' }}
           src={randomBeer.image_url}
           alt="dt"
         />
-        <div>{randomBeer.name}</div>
-        <div>{randomBeer.tagline}</div>
-        <div>{randomBeer.first_brewed}</div>
-        <div>{randomBeer.attenuation_level}</div>
-        <div>{randomBeer.description}</div>
+        <div style={{ display: 'flex', flexDirection: 'row' }}>
+          <div style={{ marginRight: '30px' }}>{randomBeer.name}</div>
+          <div>{randomBeer.tagline}</div>
+        </div>
+        <div style={{ display: 'flex', flexDirection: 'row', margin: '20px' }}>
+          <div style={{ marginRight: '30px' }}>{randomBeer.first_brewed}</div>
+          <div>{randomBeer.attenuation_level}</div>
+        </div>
+        <div style={{ width: '50%', marginBottom: '15px' }}>
+          {randomBeer.description}
+        </div>
         <div>{randomBeer.contributed_by}</div>
       </div>
     </div>

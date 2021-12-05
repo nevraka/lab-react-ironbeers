@@ -33,17 +33,32 @@ const Beers = () => {
   }
 
   return (
-    <div>
+    <div style={{}}>
       <Header />
-      <input
-        onChange={handleSearchTermChange}
-        type="text"
-        placeholder="Search beer"
-        value={searchTerm}
-      ></input>
+      <div
+        style={{
+          display: 'flex',
+          flexDirection: 'row',
+          justifyContent: 'center',
+        }}
+      >
+        <input
+          onChange={handleSearchTermChange}
+          type="text"
+          placeholder="Search beer"
+          value={searchTerm}
+        ></input>
+      </div>
       {allBeers.map((beer) => {
         return (
-          <div key={beer._id} style={{ display: 'flex', flexDirection: 'row' }}>
+          <div
+            key={beer._id}
+            style={{
+              display: 'flex',
+              flexDirection: 'row',
+              justifyContent: 'center',
+            }}
+          >
             <div>
               <img
                 src={beer.image_url}
